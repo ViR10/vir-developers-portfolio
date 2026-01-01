@@ -65,11 +65,10 @@ export default function Hero() {
         <NightSkyCanvas />
       </div>
 
-      {/* Toast Notification - Bottom Right */}
-      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-500 transform ${
-        showNotification ? 'translate-x-0 opacity-100' : 'translate-x-[500px] opacity-0'
-      }`}>
-        <div className="bg-slate-900/95 backdrop-blur-md border border-purple-500/50 rounded-2xl shadow-2xl shadow-purple-500/20 max-w-sm overflow-hidden">
+      {/* Toast Notification - Mobile: Bottom Center, Desktop: Bottom Right */}
+      <div className={`fixed bottom-4 md:bottom-6 left-4 right-4 md:left-auto md:right-6 z-50 transition-all duration-500 transform ${showNotification ? 'translate-y-0 opacity-100' : 'translate-y-[200px] md:translate-y-0 md:translate-x-[500px] opacity-0'
+        }`}>
+        <div className="bg-slate-900/95 backdrop-blur-md border border-purple-500/50 rounded-2xl shadow-2xl shadow-purple-500/20 max-w-sm mx-auto md:mx-0 overflow-hidden">
           {/* Close Button */}
           <button
             onClick={() => setShowNotification(false)}
@@ -82,7 +81,7 @@ export default function Hero() {
           </button>
 
           {/* Content */}
-          <div className="p-5 pr-10">
+          <div className="p-4 md:p-5 pr-10">
             <div className="flex items-start gap-3 mb-3">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,10 +89,10 @@ export default function Hero() {
                 </svg>
               </div>
               <div>
-                <h4 className="text-white font-bold text-base mb-1">
+                <h4 className="text-white font-bold text-sm md:text-base mb-1">
                   Students Get Perplexity Pro Free! 🎓
                 </h4>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
                   1 month free access to GPT-5, Grok-4, Gemini 2.5 Pro & Claude Sonnet 4.5
                 </p>
               </div>
@@ -111,21 +110,21 @@ export default function Hero() {
 
           {/* Progress Bar */}
           <div className="h-1 bg-slate-800">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-[10000ms] ease-linear"
               style={{ width: showNotification ? '0%' : '100%' }}
             ></div>
           </div>
         </div>
       </div>
-      
+
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
-        <div className="text-center space-y-10">
-          
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="text-center space-y-6 md:space-y-10">
+
           {/* Main Heading */}
-          <div className="space-y-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+          <div className="space-y-4 md:space-y-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
               <span className="inline-block bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text">
                 ViR{" "}
               </span>
@@ -133,36 +132,36 @@ export default function Hero() {
                 Developers
               </span>
             </h1>
-            
+
             {/* Typing Animation */}
-            <div className="min-h-[60px] flex items-center justify-center">
-              <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-light tracking-wide">
+            <div className="min-h-[50px] md:min-h-[60px] flex items-center justify-center px-2">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-light tracking-wide">
                 {displayedText}
-                <span className="inline-block w-0.5 h-7 md:h-9 bg-orange-500 ml-2 animate-pulse"></span>
+                <span className="inline-block w-0.5 h-5 sm:h-6 md:h-7 lg:h-9 bg-orange-500 ml-1 md:ml-2 animate-pulse"></span>
               </h2>
             </div>
           </div>
 
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-100 leading-relaxed px-4">
+          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-gray-100 leading-relaxed px-2 sm:px-4">
             Crafting exceptional digital experiences with{" "}
             <span className="text-cyan-400 font-semibold">React, Next.js, Node.js</span>
             {" "}and{" "}
-            <span className="text-orange-400 font-semibold">cutting-edge AI</span>. 
+            <span className="text-orange-400 font-semibold">cutting-edge AI</span>.
             Transforming ideas into scalable, high-performance web applications.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center pt-4 md:pt-6 px-4">
             <a
               href="/projects"
-              className="px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-base rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transform transition-all duration-300"
+              className="px-8 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-sm sm:text-base rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transform transition-all duration-300"
             >
               View Projects
             </a>
             <a
               href="/contact"
-              className="px-10 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-base rounded-full hover:bg-cyan-400 hover:text-black shadow-xl hover:shadow-cyan-400/50 transition-all duration-300"
+              className="px-8 sm:px-10 py-3 sm:py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-sm sm:text-base rounded-full hover:bg-cyan-400 hover:text-black shadow-xl hover:shadow-cyan-400/50 transition-all duration-300"
             >
               Let's Talk
             </a>
@@ -171,9 +170,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <div className="w-6 h-10 border-2 border-orange-500 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-3 bg-orange-500 rounded-full"></div>
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-orange-500 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-2 md:h-3 bg-orange-500 rounded-full"></div>
         </div>
       </div>
     </section>
