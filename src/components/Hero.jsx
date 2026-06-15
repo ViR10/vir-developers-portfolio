@@ -47,64 +47,7 @@ export default function Hero() {
         <NightSkyCanvas />
       </div>
 
-<<<<<<< HEAD
-      {/* Toast Notification - Mobile: Bottom Center, Desktop: Bottom Right */}
-      <div className={`fixed bottom-4 md:bottom-6 left-4 right-4 md:left-auto md:right-6 z-50 transition-all duration-500 transform ${showNotification ? 'translate-y-0 opacity-100' : 'translate-y-[200px] md:translate-y-0 md:translate-x-[500px] opacity-0'
-        }`}>
-        <div className="bg-slate-900/95 backdrop-blur-md border border-purple-500/50 rounded-2xl shadow-2xl shadow-purple-500/20 max-w-sm mx-auto md:mx-0 overflow-hidden">
-          {/* Close Button */}
-          <button
-            onClick={() => setShowNotification(false)}
-            className="absolute top-3 right-3 w-7 h-7 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300 z-10"
-            aria-label="Close notification"
-          >
-            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
 
-          {/* Content */}
-          <div className="p-4 md:p-5 pr-10">
-            <div className="flex items-start gap-3 mb-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="text-white font-bold text-sm md:text-base mb-1">
-                  Students Get Perplexity Pro Free! 🎓
-                </h4>
-                <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
-                  1 month free access to GPT-5, Grok-4, Gemini 2.5 Pro & Claude Sonnet 4.5
-                </p>
-              </div>
-            </div>
-
-            <a
-              href="https://plex.it/referrals/GT0SYID9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full px-4 py-2.5 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold text-sm text-center rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-300"
-            >
-              Claim Free Month →
-            </a>
-          </div>
-
-          {/* Progress Bar */}
-          <div className="h-1 bg-slate-800">
-            <div
-              className="h-full bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-[10000ms] ease-linear"
-              style={{ width: showNotification ? '0%' : '100%' }}
-            ></div>
-          </div>
-        </div>
-      </div>
-
-=======
-
-      
->>>>>>> 7028622 (feat: complete transform into Enterprise AI Automation Agency with AI Assistant & CEO Executive Profile)
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center space-y-6 md:space-y-10">
@@ -130,32 +73,12 @@ export default function Hero() {
           </div>
 
           {/* Description */}
-<<<<<<< HEAD
-          <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-gray-100 leading-relaxed px-2 sm:px-4">
-            Crafting exceptional digital experiences with{" "}
-            <span className="text-cyan-400 font-semibold">React, Next.js, Node.js</span>
-            {" "}and{" "}
-            <span className="text-orange-400 font-semibold">cutting-edge AI</span>.
-            Transforming ideas into scalable, high-performance web applications.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center pt-4 md:pt-6 px-4">
-            <a
-              href="/projects"
-              className="px-8 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-sm sm:text-base rounded-full shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transform transition-all duration-300"
-            >
-              View Projects
-            </a>
-=======
           <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-100 leading-relaxed px-4">
             Transforming businesses with custom LLMs, RAG-based AI chatbots, conversational voice agents, and intelligent workflow automation.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center pt-6">
-
->>>>>>> 7028622 (feat: complete transform into Enterprise AI Automation Agency with AI Assistant & CEO Executive Profile)
             <a
               href="/contact"
               className="px-8 sm:px-10 py-3 sm:py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-sm sm:text-base rounded-full hover:bg-cyan-400 hover:text-black shadow-xl hover:shadow-cyan-400/50 transition-all duration-300"
