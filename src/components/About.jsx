@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import profileImage from "../assets/dv.png";
+import profileImage from "../assets/vir.png";
 
 const STATS = [
   { 
@@ -122,10 +122,41 @@ export default function About() {
               
               <h2 className="text-4xl font-bold text-white mb-2">Adeel Shahid</h2>
               <p className="text-cyan-400 text-xl font-semibold mb-4">Founder & CEO</p>
-              <p className="text-gray-400 mb-6 max-w-md">
-                Visionary leader driving innovation in web development and AI integration at ViR Developers
-              </p>
               
+              <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 mb-6 max-w-md backdrop-blur-sm shadow-xl text-left">
+                <p className="text-gray-300 italic text-sm mb-3 font-light leading-relaxed">
+                  "AI is not about replacing human creativity; it's about eliminating operational friction. We build autonomous systems that give companies massive leverage to scale."
+                </p>
+                <p className="text-xs text-orange-400 font-bold tracking-wider">— ADEEL SHAHID, FOUNDER & LEAD AI ARCHITECT</p>
+              </div>
+
+              <div className="mb-6 w-full max-w-md text-left">
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-2 border-b border-slate-800 pb-1">Core Expertise</h4>
+                <ul className="grid grid-cols-2 gap-2 text-xs text-gray-400">
+                  <li className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Custom Enterprise LLMs
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Multi-Agent RAG Systems
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Voice Calling Bots (Vapi/Twilio)
+                  </li>
+                  <li className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Make & Zapier Workflows
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-6 w-full max-w-md justify-center lg:justify-start">
+                <a
+                  href="/contact"
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-xs font-bold rounded-full text-center hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 transition-all duration-300 shadow-md hover:shadow-cyan-500/30"
+                >
+                  Book Executive Consultation
+                </a>
+              </div>
+
               <div className="flex gap-3">
                 <a
                   href="https://github.com/ViR10"
@@ -167,28 +198,23 @@ export default function About() {
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-orange-400 to-cyan-400 text-transparent bg-clip-text">
-                  Building Digital Excellence
+                  Building AI-Driven Automation
                 </span>
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                At ViR Developers, we are passionate about transforming ideas into powerful digital solutions. With expertise in modern web technologies, AI integration, and innovative design, we deliver excellence in every project.
+                At ViR Developers, we are passionate about transforming enterprise operations using powerful AI automation systems. With expertise in custom LLMs, RAG systems, voice agents, and workflow integrations, we deliver measurable efficiency and business growth.
               </p>
               <p className="text-gray-400 leading-relaxed mb-8">
-                Founded with a vision to revolutionize digital experiences, we combine technical expertise with creative innovation to help businesses thrive in the digital age. Our commitment to quality and client success drives everything we do.
+                Founded with a vision to revolutionize operational workflows, we combine advanced machine learning integrations with creative workflow automation to help companies scale. Our commitment to efficiency and automation ROI drives everything we do.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-orange-500/50"
                 >
-                  Get in Touch
+                  Book Free AI Audit
                 </a>
-                <a
-                  href="/projects"
-                  className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                >
-                  View Projects
-                </a>
+
               </div>
             </div>
           </div>
@@ -240,7 +266,7 @@ export default function About() {
                 <h2 className="text-2xl font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                To empower businesses with innovative technology solutions that drive growth, efficiency, and digital transformation. We're committed to delivering exceptional quality and creating lasting value for our clients through cutting-edge development and AI integration.
+                To empower businesses with intelligent automation solutions that drive growth, extreme efficiency, and AI transformation. We're committed to delivering exceptional systems and creating lasting value for our clients through advanced workflow automation and custom LLM integrations.
               </p>
             </div>
 
@@ -260,7 +286,7 @@ export default function About() {
                 <h2 className="text-2xl font-bold text-white">Our Vision</h2>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                To become a leading force in digital innovation, recognized for our technical excellence, creative solutions, and unwavering commitment to client success. We envision a future where technology seamlessly enhances every business and creates meaningful impact.
+                To become a globally recognized pioneer in AI automation, celebrated for our technical intelligence, custom integrations, and unwavering commitment to client ROI. We envision a future where artificial intelligence seamlessly handles routine operations, freeing businesses to scale.
               </p>
             </div>
           </div>

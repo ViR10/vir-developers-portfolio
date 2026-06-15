@@ -104,11 +104,7 @@ const Footer = () => {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link to="/projects" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                  Projects
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -118,22 +114,22 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-orange-400 transition-colors duration-300">
-                  Web Development
+                  Custom AI Chatbots
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-orange-400 transition-colors duration-300">
-                  AI Integration
+                  AI Voice Agents
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-orange-400 transition-colors duration-300">
-                  UI/UX Design
+                  Workflow Automation
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-orange-400 transition-colors duration-300">
-                  Custom Tools
+                  AI SaaS Development
                 </Link>
               </li>
             </ul>
@@ -141,19 +137,19 @@ const Footer = () => {
 
           {/* Contact section */}
           <div className="md:col-span-4 space-y-4">
-            <h3 className="font-semibold text-white text-lg">Get In Touch</h3>
+            <h3 className="font-semibold text-white text-lg">Book Free AI Audit</h3>
             <p className="text-gray-400">
-              Ready to start your project? Contact us today for a free consultation.
+              Ready to automate your operations? Contact us today for a free AI audit.
             </p>
             <div className="space-y-3">
               <a 
-                href="mailto:veeradeelshahid@gmail.com"
+                href="mailto:virdevelopers10@gmail.com"
                 className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
               >
                 <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="break-all text-sm">veeradeelshahid@gmail.com</span>
+                <span className="break-all text-sm">virdevelopers10@gmail.com</span>
               </a>
               <a 
                 href="https://wa.me/923235331206"
@@ -171,7 +167,7 @@ const Footer = () => {
               to="/contact"
               className="inline-block px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full hover:from-orange-600 hover:to-orange-700 transition-all duration-300 hover:scale-105"
             >
-              Start a Project
+              Book Free AI Audit
             </Link>
           </div>
         </div>

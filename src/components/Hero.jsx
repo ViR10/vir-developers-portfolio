@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import NightSkyCanvas from "./NightSkyCanvas";
 
 const TYPED_TEXTS = [
-  "Web Development Excellence",
-  "AI-Powered Solutions",
-  "Full-Stack Innovation"
+  "Enterprise AI Solutions",
+  "Custom AI Chatbots",
+  "Workflow Automation",
+  "AI Voice Agents"
 ];
 
 export default function Hero() {
@@ -13,7 +14,6 @@ export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
-  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const currentText = TYPED_TEXTS[textIndex];
@@ -38,25 +38,7 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex]);
 
-  // Show notification after 3 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowNotification(true);
-    }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Auto-hide notification after 10 seconds
-  useEffect(() => {
-    if (showNotification) {
-      const timer = setTimeout(() => {
-        setShowNotification(false);
-      }, 10000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [showNotification]);
 
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
@@ -65,6 +47,7 @@ export default function Hero() {
         <NightSkyCanvas />
       </div>
 
+<<<<<<< HEAD
       {/* Toast Notification - Mobile: Bottom Center, Desktop: Bottom Right */}
       <div className={`fixed bottom-4 md:bottom-6 left-4 right-4 md:left-auto md:right-6 z-50 transition-all duration-500 transform ${showNotification ? 'translate-y-0 opacity-100' : 'translate-y-[200px] md:translate-y-0 md:translate-x-[500px] opacity-0'
         }`}>
@@ -118,6 +101,10 @@ export default function Hero() {
         </div>
       </div>
 
+=======
+
+      
+>>>>>>> 7028622 (feat: complete transform into Enterprise AI Automation Agency with AI Assistant & CEO Executive Profile)
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center space-y-6 md:space-y-10">
@@ -143,6 +130,7 @@ export default function Hero() {
           </div>
 
           {/* Description */}
+<<<<<<< HEAD
           <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-gray-100 leading-relaxed px-2 sm:px-4">
             Crafting exceptional digital experiences with{" "}
             <span className="text-cyan-400 font-semibold">React, Next.js, Node.js</span>
@@ -159,11 +147,20 @@ export default function Hero() {
             >
               View Projects
             </a>
+=======
+          <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-100 leading-relaxed px-4">
+            Transforming businesses with custom LLMs, RAG-based AI chatbots, conversational voice agents, and intelligent workflow automation.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-5 justify-center pt-6">
+
+>>>>>>> 7028622 (feat: complete transform into Enterprise AI Automation Agency with AI Assistant & CEO Executive Profile)
             <a
               href="/contact"
               className="px-8 sm:px-10 py-3 sm:py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-sm sm:text-base rounded-full hover:bg-cyan-400 hover:text-black shadow-xl hover:shadow-cyan-400/50 transition-all duration-300"
             >
-              Let's Talk
+              Book a Free AI Audit
             </a>
           </div>
         </div>

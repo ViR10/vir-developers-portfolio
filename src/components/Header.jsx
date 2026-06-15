@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { name: "About", path: "/about" },
   { name: "Skills", path: "/skills" },
   { name: "AI Workflow", path: "/ai-workflow" },
-  { name: "Projects", path: "/projects" },
+
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" }
 ];
@@ -57,14 +57,14 @@ export default function Navbar() {
             
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center p-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center p-1 shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <img 
                   src={logo} 
                   alt="ViR Developers Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="hidden sm:block">
+              <div>
                 <h1 className="text-xl font-bold">
                   <span className="text-cyan-400">ViR</span>{" "}
                   <span className="text-white">Developers</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
                 to="/contact"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-bold rounded-full hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
               >
-                Get Started
+                Book AI Audit
               </Link>
             </div>
 
@@ -157,7 +157,7 @@ export default function Navbar() {
             to="/contact"
             className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-bold text-center rounded-full hover:from-cyan-600 hover:to-cyan-700 transition-all duration-300 shadow-lg"
           >
-            Get Started
+            Book AI Audit
           </Link>
 
           {/* Social Links - Mobile */}

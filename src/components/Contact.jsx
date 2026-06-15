@@ -10,6 +10,8 @@ export default function Contact() {
     message: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -20,19 +22,36 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError("");
     
-    // Create WhatsApp message
-    const message = `*New Project Inquiry*%0A%0A*Name:* ${formData.firstName} ${formData.lastName}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Service:* ${formData.service}%0A*Message:* ${formData.message}`;
-    const whatsappUrl = `https://wa.me/923235331206?text=${message}`;
-
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
-
-    // Show success message
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
+    fetch("https://formsubmit.co/ajax/virdevelopers10@gmail.com", {
+      method: "POST",
+      headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+          "Name": `${formData.firstName} ${formData.lastName}`,
+          "Email": formData.email,
+          "Phone": formData.phone || "Not provided",
+          "Selected Service": formData.service,
+          "Message": formData.message,
+          "_subject": `New AI Agency Audit Inquiry from ${formData.firstName} ${formData.lastName}`,
+          "_template": "table"
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error("Form submission failed");
+    })
+    .then(data => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      
+      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
@@ -41,8 +60,17 @@ export default function Contact() {
         service: "",
         message: ""
       });
-      setIsSubmitted(false);
-    }, 3000);
+      
+      // Reset success state after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+    })
+    .catch(error => {
+      console.error(error);
+      setIsSubmitting(false);
+      setSubmitError("Failed to send your message. Please try again or email us directly at virdevelopers10@gmail.com");
+    });
   };
 
   const contactInfo = [
@@ -53,9 +81,9 @@ export default function Contact() {
         </svg>
       ),
       title: "Email",
-      description: "Our friendly team is here to help.",
-      contact: "veeradeelshahid@gmail.com",
-      link: "mailto:veeradeelshahid@gmail.com"
+      description: "Our experts respond within 24 hours.",
+      contact: "virdevelopers10@gmail.com",
+      link: "mailto:virdevelopers10@gmail.com"
     },
     {
       icon: (
@@ -64,7 +92,7 @@ export default function Contact() {
         </svg>
       ),
       title: "WhatsApp",
-      description: "Message us anytime.",
+      description: "Direct chat for urgent queries.",
       contact: "0323-5331206",
       link: "https://wa.me/923235331206"
     },
@@ -76,7 +104,7 @@ export default function Contact() {
         </svg>
       ),
       title: "Location",
-      description: "Working remotely worldwide.",
+      description: "Serving clients worldwide.",
       contact: "Pakistan",
       link: null
     },
@@ -89,13 +117,13 @@ export default function Contact() {
       <section className="py-12 px-6 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-orange-500/20 border border-cyan-400 rounded-full text-cyan-400 text-sm font-semibold mb-4">
-            Contact
+            AI Consultation
           </div>
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-orange-400 text-transparent bg-clip-text mb-4">
-            Get in Touch
+            Book a Free AI Audit
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            We'd love to hear from you. Please fill out the form below or reach out using the contact information.
+            Ready to integrate intelligence into your workflows? Submit your details below to schedule your free consultation call.
           </p>
         </div>
       </section>
@@ -144,14 +172,14 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="opacity-0 animate-fade-slide-up" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
             <div className="bg-slate-900/50 border border-slate-700 rounded-2xl p-8 h-full">
-              <h2 className="text-2xl font-bold text-white mb-2">Send us a Message</h2>
+              <h2 className="text-2xl font-bold text-white mb-2">Request an AI Audit & Demo</h2>
               <p className="text-gray-400 mb-6">
-                Fill out the form below and we'll get back to you as soon as possible.
+                Fill out the details below. Our team will review your requirements and respond within 24 hours.
               </p>
 
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="firstName" className="block text-white font-semibold text-sm">
                         First name
@@ -186,7 +214,7 @@ export default function Contact() {
 
                   <div className="space-y-2">
                     <label htmlFor="email" className="block text-white font-semibold text-sm">
-                      Email
+                      Email Address
                     </label>
                     <input
                       type="email"
@@ -202,7 +230,7 @@ export default function Contact() {
 
                   <div className="space-y-2">
                     <label htmlFor="phone" className="block text-white font-semibold text-sm">
-                      Phone (Optional)
+                      Phone Number (Optional)
                     </label>
                     <input
                       type="tel"
@@ -210,14 +238,14 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="0300-1234567"
+                      placeholder="0323-5331206"
                       className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:border-cyan-400 focus:outline-none transition-colors"
                     />
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="service" className="block text-white font-semibold text-sm">
-                      Service
+                      Service of Interest
                     </label>
                     <select
                       id="service"
@@ -228,39 +256,59 @@ export default function Contact() {
                       className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:border-cyan-400 focus:outline-none transition-colors"
                     >
                       <option value="">Select a service</option>
-                      <option value="Web Development">Web Development</option>
-                      <option value="AI Integration">AI Integration</option>
-                      <option value="UI/UX Design">UI/UX Design</option>
-                      <option value="Custom Tools">Custom Tools</option>
-                      <option value="Educational Systems">Educational Systems</option>
+                      <option value="Custom AI Chatbots">Custom AI Chatbots</option>
+                      <option value="AI Voice Agents">AI Voice Agents</option>
+                      <option value="Workflow Automation">Workflow Automation</option>
+                      <option value="AI SaaS Development">AI SaaS Development</option>
+                      <option value="Predictive Analytics">Predictive Analytics</option>
+                      <option value="AI Consultation & Audits">AI Consultation & Audits</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="message" className="block text-white font-semibold text-sm">
-                      Message
+                      Business Description & AI Goals
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us how we can help..."
+                      placeholder="Describe your current manual tasks, tech stack, and what you'd like to automate..."
                       rows="4"
                       required
                       className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:border-cyan-400 focus:outline-none transition-colors resize-none"
                     ></textarea>
                   </div>
 
+                  {submitError && (
+                    <div className="bg-red-500/10 border border-red-500 text-red-200 px-4 py-3 rounded-lg text-sm text-center">
+                      {submitError}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center gap-2 group"
+                    disabled={isSubmitting}
+                    className="w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        Sending Request...
+                      </>
+                    ) : (
+                      <>
+                        Book My AI Audit
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </>
+                    )}
                   </button>
                 </form>
               ) : (
@@ -270,9 +318,9 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold text-white">Audit Requested!</h3>
                   <p className="text-gray-400 max-w-sm">
-                    Thank you for reaching out. We'll get back to you as soon as possible.
+                    Thank you for booking your free AI Audit. Our team will review your business details and email you shortly at the address provided.
                   </p>
                 </div>
               )}

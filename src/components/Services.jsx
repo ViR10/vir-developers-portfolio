@@ -5,18 +5,18 @@ const SERVICES = [
     id: 1,
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
       </svg>
     ),
-    title: "Web Development",
-    shortDesc: "Full-stack web applications with modern technologies",
-    description: "Custom web applications built with React, Next.js, and Node.js. From concept to deployment, we deliver scalable, performant solutions tailored to your business needs.",
+    title: "Custom AI Chatbots",
+    shortDesc: "RAG-based support agents trained on your custom business data",
+    description: "Build conversational AI chatbots that understand your custom knowledge base, documentation, and APIs. We leverage advanced Retrieval-Augmented Generation (RAG) and LLMs to provide context-aware, 24/7 client support and lead generation.",
     features: [
-      "React & Next.js Development",
-      "RESTful API Design",
-      "Database Architecture",
-      "Responsive UI/UX",
-      "Performance Optimization"
+      "RAG (Retrieval-Augmented Generation)",
+      "Custom Knowledge Base Integration",
+      "Multi-Platform (Web, WhatsApp, Telegram, Discord)",
+      "Conversation Analytics & Feedback Loops",
+      "Seamless Human Handoff Triggers"
     ],
     color: "cyan"
   },
@@ -24,18 +24,18 @@ const SERVICES = [
     id: 2,
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
       </svg>
     ),
-    title: "AI Integration",
-    shortDesc: "Intelligent automation and AI-powered features",
-    description: "Integrate cutting-edge AI models into your applications. Leverage GPT-4, Claude, and Gemini for intelligent automation and enhanced user experiences.",
+    title: "AI Voice Agents",
+    shortDesc: "Intelligent conversational phone agents for booking and sales calls",
+    description: "Develop conversational phone agents capable of handling inbound support and outbound scheduling. Highly responsive, natural-sounding voice systems that integrate directly with your CRM and scheduling tools to automate bookings.",
     features: [
-      "AI Chatbot Development",
-      "Workflow Automation",
-      "Natural Language Processing",
-      "ML Model Integration",
-      "Intelligent Data Analysis"
+      "Inbound & Outbound Calling Bots",
+      "Real-time CRM Data Integration",
+      "Custom Voice Clones & Emotion Controls",
+      "Appointment Scheduling & Booking Automation",
+      "Call Transcription & Sentiment Analysis"
     ],
     color: "orange"
   },
@@ -43,18 +43,18 @@ const SERVICES = [
     id: 3,
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a2 2 0 002 2h3a1 1 0 011 1v3a2 2 0 002 2 2 2 0 110 4 2 2 0 00-2 2v3a1 1 0 01-1 1h-3a2 2 0 00-2 2v1a2 2 0 11-4 0v-1a2 2 0 00-2-2H8a1 1 0 01-1-1v-3a2 2 0 00-2-2 2 2 0 110-4 2 2 0 002-2V8a1 1 0 011-1h3a2 2 0 002-2V4z" />
       </svg>
     ),
-    title: "UI/UX Design",
-    shortDesc: "Beautiful, intuitive interfaces that users love",
-    description: "Modern, user-centered design that combines aesthetics with functionality. Wireframes, prototypes, and pixel-perfect implementations that delight users.",
+    title: "Workflow Automation",
+    shortDesc: "Connecting CRMs, tools, and processes via Make & Zapier",
+    description: "Connect your enterprise applications and automate repetitive daily work. We design smart, AI-enhanced pipelines using Make.com, Zapier, and custom integrations to eliminate manual data entry and human error.",
     features: [
-      "User Research & Testing",
-      "Wireframing & Prototyping",
-      "Responsive Design",
-      "Design Systems",
-      "Brand Identity"
+      "Make.com & Zapier Integration",
+      "Automated Lead Sorting & Nurturing",
+      "AI-Driven Document Extraction",
+      "E-commerce & CRM Syncing",
+      "Custom Webhook & API Solutions"
     ],
     color: "cyan"
   },
@@ -62,18 +62,18 @@ const SERVICES = [
     id: 4,
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
       </svg>
     ),
-    title: "Performance Optimization",
-    shortDesc: "Lightning-fast applications that scale",
-    description: "Optimize your application for speed, efficiency, and scalability. Code splitting, caching strategies, and performance monitoring for the best user experience.",
+    title: "AI SaaS Development",
+    shortDesc: "Custom web applications powered by generative AI models",
+    description: "Design and build state-of-the-art AI-powered software solutions. From generative writing tools to image processors, we handle everything from frontend UI/UX to serverless backend architectures and custom fine-tuning.",
     features: [
-      "Code Optimization",
-      "Load Time Reduction",
-      "SEO Enhancement",
-      "Caching Strategies",
-      "Performance Monitoring"
+      "LLM API Integration (OpenAI, Claude, Gemini)",
+      "Custom Vector Database Setup",
+      "Scalable Serverless Infrastructure",
+      "Stripe Subscriptions & SaaS Authentication",
+      "Premium, Responsive UI/UX Design"
     ],
     color: "orange"
   },
@@ -81,18 +81,18 @@ const SERVICES = [
     id: 5,
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
     ),
-    title: "Custom Tools Development",
-    shortDesc: "Specialized tools for productivity and automation",
-    description: "Build custom tools tailored to your specific needs. From calculators to generators, we create efficient utilities that streamline your workflows.",
+    title: "Predictive Analytics",
+    shortDesc: "Forecasting business trends and data-driven insights",
+    description: "Harness the power of machine learning algorithms to predict customer churn, sales trends, and inventory requirements. Translate raw enterprise data into actionable visual dashboards and intelligent decisions.",
     features: [
-      "Web-based Utilities",
-      "Automation Scripts",
-      "Data Converters",
-      "Calculator Tools",
-      "Custom Generators"
+      "Machine Learning Forecasting Models",
+      "Customer Churn & LTV Analysis",
+      "Interactive Data Visualization",
+      "Database & Data Lake Integrations",
+      "Automated Business Intelligence Reporting"
     ],
     color: "cyan"
   },
@@ -100,20 +100,18 @@ const SERVICES = [
     id: 6,
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     ),
-    title: "Educational Systems",
-    shortDesc: "Management systems for educational institutions",
-    description: "Complete educational management solutions including attendance tracking, grade management, and student information systems for modern institutions.",
+    title: "AI Consultation & Audits",
+    shortDesc: "Discovering automation bottlenecks and planning roadmaps",
+    description: "Let us review your current company operations and identify the highest ROI opportunities for AI automation. We provide a step-by-step implementation blueprint to scale your operations and cut overhead costs.",
     features: [
-      "Attendance Management",
-      "Grade Calculators",
-      "Student Portals",
-      "Teacher Dashboards",
-      "Report Generation"
+      "Operational Bottleneck Analysis",
+      "ROI & Feasibility Assessments",
+      "Custom Automation Blueprints",
+      "AI Tool Stack Recommendations",
+      "Team Training & Onboarding Guidelines"
     ],
     color: "orange"
   }
@@ -149,18 +147,18 @@ export default function Services() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="opacity-0 animate-fade-slide-down">
             <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-orange-500/20 border border-cyan-400 rounded-full text-cyan-400 text-sm font-semibold mb-6">
-              What We Offer
+              Enterprise AI Solutions
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 opacity-0 animate-fade-slide-up animation-delay-200">
             <span className="bg-gradient-to-r from-cyan-400 via-orange-400 to-cyan-400 text-transparent bg-clip-text animate-gradient-flow bg-[length:200%_auto]">
-              Our Services
+              AI Solutions
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto opacity-0 animate-fade-in animation-delay-400">
-            Comprehensive web development solutions powered by modern technologies and AI innovation.
+            Transforming business operations with state-of-the-art AI systems, automated workflows, and custom LLMs.
           </p>
         </div>
       </section>
@@ -198,11 +196,11 @@ export default function Services() {
               { 
                 icon: (
                   <svg className="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ), 
-                title: "Fast Delivery", 
-                desc: "Quick turnaround without compromising quality" 
+                title: "Tangible Business ROI", 
+                desc: "We focus on saving operational hours and cutting overheads via automation" 
               },
               { 
                 icon: (
@@ -210,8 +208,8 @@ export default function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 ), 
-                title: "Premium Quality", 
-                desc: "Clean code, best practices, and attention to detail" 
+                title: "Cutting-Edge Models", 
+                desc: "Integration with GPT-4o, Claude 3.5 Sonnet, and Gemini 1.5 Pro" 
               },
               { 
                 icon: (
@@ -219,8 +217,8 @@ export default function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                   </svg>
                 ), 
-                title: "Dedicated Support", 
-                desc: "Ongoing support and maintenance after launch" 
+                title: "Seamless API Syncing", 
+                desc: "Connecting CRMs, databases, and third-party tools into single flows" 
               },
               { 
                 icon: (
@@ -228,8 +226,8 @@ export default function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ), 
-                title: "Client-Focused", 
-                desc: "Your success is our priority" 
+                title: "Client-Focused Results", 
+                desc: "Tailored integrations built for your specific team workflow" 
               },
               { 
                 icon: (
@@ -237,8 +235,8 @@ export default function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 ), 
-                title: "Secure & Reliable", 
-                desc: "Industry-standard security practices" 
+                title: "Secure & Compliant", 
+                desc: "Industry-standard data handling and privacy protocols" 
               },
               { 
                 icon: (
@@ -246,8 +244,8 @@ export default function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 ), 
-                title: "Scalable Solutions", 
-                desc: "Built to grow with your business" 
+                title: "Scalable Infrastructure", 
+                desc: "AI pipelines that adapt as your database and team size expand" 
               }
             ].map((feature, idx) => (
               <FeatureCard 
@@ -265,29 +263,23 @@ export default function Services() {
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Start Your{" "}
+            Ready to Automate Your{" "}
             <span className="bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text">
-              Project?
+              Business?
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Let's discuss your requirements and build something amazing together.
+            Book your free 30-minute AI Audit today and identify automation bottlenecks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="group px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2"
             >
-              Get Started
+              Book Free AI Audit
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </a>
-            <a
-              href="/projects"
-              className="px-10 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300"
-            >
-              View Projects
             </a>
           </div>
         </div>
@@ -483,7 +475,7 @@ function ServiceModal({ service, onClose }) {
             href="/contact"
             className={`flex-1 px-6 py-4 bg-gradient-to-r ${gradientColor} text-white font-bold text-lg rounded-full text-center hover:scale-105 transition-all duration-300 shadow-xl`}
           >
-            Get Started
+            Book Free AI Audit
           </a>
           <button
             onClick={onClose}

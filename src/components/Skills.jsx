@@ -257,12 +257,7 @@ export default function Skills() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
-            <a
-              href="/projects"
-              className="px-10 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300"
-            >
-              View Projects
-            </a>
+
           </div>
         </div>
       </section>
